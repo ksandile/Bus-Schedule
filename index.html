@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Schedule App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Login Form -->
+    <div id="login-form" class="form-container">
+      <h1>Login</h1>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Schedule Form -->
+    <div id="schedule-form" class="form-container hidden">
+      <h1>Bus Schedule</h1>
+      <input type="text" id="pickUp" placeholder="Pick-Up Station" />
+      <input type="text" id="dropOff" placeholder="Drop-Off Station" />
+      <input type="date" id="date" />
+      <input type="time" id="time" />
+      <button onclick="getSchedule()">Get Schedule</button>
+      
+      <div id="predictions"></div>
+      <div id="alerts"></div>
+      
+      <!-- Search Station -->
+      <div id="search-container">
+        <input type="text" id="searchInput" placeholder="Search Station by Name" />
+        <button onclick="searchStation()">Search</button>
+        <div id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
